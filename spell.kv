@@ -1,0 +1,24 @@
+Screen:
+    MDFloatLayout:
+        BoxLayout:
+            orientation:'vertical'
+            pos_hint: {'center_y': .9}
+            MDLabel:
+                id: spell_Label
+                text: 'Press the Microphone to Start'
+                font_size: 32
+                halign: "center"
+                pos_hint: {'center_x': .5, 'center_y': .5}
+
+        BoxLayout:
+            orientation:'vertical'
+            pos_hint: {'center_y': .7}
+
+            MDFloatingActionButton:
+                id: mic_button
+                icon: 'microphone'
+                halign: 'center'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+                on_release: app.input()
+
+
